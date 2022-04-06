@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
+import Vid from "./pages/Vid.jsx";
 
 const App = () => {
     return (
