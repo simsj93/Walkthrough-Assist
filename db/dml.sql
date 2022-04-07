@@ -216,8 +216,24 @@ The variable 'sum' would print to '34' due to type coercion of value2."),
 "Allows you to track state and perform side effects in function components.");
 
 INSERT INTO resources (url)
-VALUES ("https://www.w3schools.com/js/js_objects.asp");
+VALUES ("https://www.w3schools.com/js/js_objects.asp"),
+("https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects"),
+("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"),
+("https://www.w3schools.com/js/js_class_inheritance.asp"),
+("https://www.w3schools.com/jsref/jsref_class_super.asp");
 
 INSERT INTO concepts_to_resources (concept_id, resource_id)
 VALUES((SELECT id from concepts WHERE name = "Object Oriented Programming"),
-(SELECT id from resources WHERE url = "https://www.w3schools.com/js/js_objects.asp"));
+(SELECT id from resources WHERE url = "https://www.w3schools.com/js/js_objects.asp")),
+((SELECT id from concepts WHERE name = "Object Oriented Programming"),
+(SELECT id from resources WHERE url = "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects")),
+((SELECT id from concepts WHERE name = "Javascript Classes"),
+(SELECT id from resources WHERE url = "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes")),
+((SELECT id from concepts WHERE name = "Javascript Classes"),
+(SELECT id from resources WHERE url = "https://www.w3schools.com/js/js_class_inheritance.asp")),
+((SELECT id from concepts WHERE name = "Javascript Classes"),
+(SELECT id from resources WHERE url = "https://www.w3schools.com/jsref/jsref_class_super.asp"));
+
+INSERT INTO videos_to_concepts (concept_id, video_id)
+VALUES((SELECT id from concepts where name = "Object Oriented Programming"), 
+(SELECT id from videos where subject = "OOP Drills"));
