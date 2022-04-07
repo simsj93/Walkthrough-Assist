@@ -1,24 +1,23 @@
+import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
-import Navbar from "./navbar/Navbar.jsx";
-import About from "./about/About.jsx"
-import ContentCards from "./content-cards/ContentCards.jsx";
-
-import Footer from "./footer/Footer.jsx";
+import About from "./About.jsx";
+import ContentCards from "./ContentCards.jsx";
+import FrontNavbar from "../components/navbar/Navbar.jsx";
+import Footer from "./Footer.jsx";
 
 const FrontPage = () => {
   return (
-    <BrowserRouter>
-      <Navbar />
-    <section className="container">
-    <Routes>
-        <Route path="/" element={<About />} />
-        <Route path="/" element={<ContentCards />} />
-        <Route path="/" element={<Footer />} />
-    </Routes>
-    </section>
-    </BrowserRouter>
+    <>
+      <FrontNavbar />
+      <section className="container">
+        <h1>test</h1>
+        <About />
+        <ContentCards />
+        <Footer />
+
+      </section>
+    </>
   );
 };
 
