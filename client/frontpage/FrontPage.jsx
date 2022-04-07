@@ -15,7 +15,6 @@ const FrontPage = () => {
         <About />
         <ContentCards />
         <Footer />
-
       </section>
     </>
   );
