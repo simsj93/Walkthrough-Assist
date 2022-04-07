@@ -5,7 +5,7 @@ USE walkthrough_assist;
 DROP TABLE IF EXISTS videos;
 CREATE TABLE videos (
     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    subject VARCHAR(100),
+    subject VARCHAR(255),
     description TEXT,
     url TEXT
 );
@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS timestamps;
 CREATE TABLE timestamps (
 	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     video_id INT NOT NULL,
+    subject VARCHAR(255),
     start_time TIME,
     end_time TIME,
     CONSTRAINT fk_videoid FOREIGN KEY (video_id)
@@ -23,7 +24,7 @@ CREATE TABLE timestamps (
 DROP TABLE IF EXISTS concepts;
 CREATE TABLE concepts (
 	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    name VARCHAR(100),
+    name VARCHAR(255),
     explanation TEXT
 );
 
@@ -39,7 +40,7 @@ CREATE TABLE videos_to_concepts (
 DROP TABLE IF EXISTS resources;
 CREATE TABLE resources (
 	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    title VARCHAR(100),
+    title VARCHAR(255),
     url TEXT
 );
 
