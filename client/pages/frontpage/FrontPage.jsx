@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import About from "./About.jsx";
 import ContentCards from "./ContentCards.jsx";
-import FrontNavbar from "../components/Navbar.jsx";
+import FrontNavbar from "../components/navbar/Navbar.jsx";
 import Footer from "./Footer.jsx";
 
 const FrontPage = () => {
