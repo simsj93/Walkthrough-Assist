@@ -6,7 +6,7 @@ import ContentCards from "./ContentCards.jsx";
 import FrontNavbar from "../components/Navbar.jsx";
 import Footer from "./Footer.jsx";
 
-const FrontPage = () => {
+const Home = () => {
   return (
     <>
       <FrontNavbar />
@@ -21,4 +21,4 @@ const FrontPage = () => {
   );
 };
 
-export default FrontPage;
+export default Home;

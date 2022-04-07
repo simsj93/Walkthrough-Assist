@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import FrontPage from "./frontpage/FrontPage.jsx";
+import Home from "./frontpage/Home.jsx";
 
-import VideoPlayer from "./VideoPlayer.jsx";
+import VideoPlayer from "./videopage/VideoPlayer.jsx";
 
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
         <BrowserRouter>
         
             <Routes>
-                <Route path="/" element={<FrontPage />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/videos" element={<VideoPlayer />} />
             </Routes>
         </BrowserRouter>

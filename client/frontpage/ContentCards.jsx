@@ -2,10 +2,10 @@ import React from "react";
 
 const ContentCards = () => {
   return (
-    <div className="card-deck">
+    <div className="card-deck container">
       <div className="card">
         <div className="card-body">
-          <h4 className="card-title">Reacting to React </h4>
+          <h4 className="card-title text-primary">Reacting to React </h4>
           <p className="card-text">
             Learn best practices for setting up a new React project with the
             Create-React-App environment. In this video, the instructor
