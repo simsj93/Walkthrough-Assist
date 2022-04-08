@@ -1,0 +1,33 @@
+.App {
+  color: white;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.player {
+  width: 50%;
+  height: 300px;
+  background: #151515;
+  left: 30px;
+  position: fixed;
+  top: 300px;
+}
+
+.timestamp {
+  font-size: xx-large;
+  background-color: #bf45c3;
+  height: 89px;
+  width: 433px;
+  margin-right: 400px;
+  top: 300px;
+  border-radius: 10px;
+}
+
+.timestamp-box {
+  position: absolute;
+  width: 533px;
+  height: 298px;
+  left: 907px;
+  top: 503px;
+  background-color: aqua;
+}
