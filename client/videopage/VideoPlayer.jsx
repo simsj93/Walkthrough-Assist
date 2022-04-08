@@ -4,7 +4,7 @@ import Youtube from "react-youtube";
 
 
 
-const RealVideoPlayer = () => {
+const VideoPlayer = () => {
 
     const { videoid } = useParams();
 
@@ -37,4 +37,4 @@ const RealVideoPlayer = () => {
     }
 };
 
-export default RealVideoPlayer;
+export default VideoPlayer;

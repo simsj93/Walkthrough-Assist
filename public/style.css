@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Quattrocento+Sans&display=swap');
+:root{
+    --bg1Dark: #370c6c; /*Dark Violet */
+    --bg2Light: 	#ebdefb; /*Grayish Violet */
+    --accentColor:   #4da5bb;  /* Moderate Cyan*/
+    --titleFont: 'Oswald';
+    --pargraphFont: 'Quattrocento';  
+}
+
+body{
+    background-color:var(--bg1Dark);
+}
+
+.header {
+    background-color: #fff;
+}
+
+.logo{
+    max-width: 100%;
+    height: auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;   
+}
+
