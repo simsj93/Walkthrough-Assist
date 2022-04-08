@@ -29,10 +29,11 @@
     "style-loader": "^0.23.1",
     "styled-components": "^5.3.5",
     "webpack": "^5.72.0",
+    "css-loader": "^6.7.1",
     "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
-    "css-loader": "^6.7.1",
+   
     "file-loader": "^6.2.0",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.3",

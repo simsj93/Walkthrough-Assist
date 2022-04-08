@@ -1,37 +1,40 @@
-import React, { useState, useEffect } from 'react';
-// import Youtube from "react-youtube";
+import React, { useState } from 'react';
+import { useParams } from "react-router-dom"
+import Youtube from "react-youtube";
+
+
 
 const VideoPlayer = () => {
 
-  const [player, setPlayer] = useState({});
-        const opts = {
-          height: '780',
-          width: '1280',
-          playerVars: {
-            // https://developers.google.com/youtube/player_parameters
-            autoplay: 0,
-          },
-        };
+    const { videoid } = useParams();
 
-     const changeTime = (time) =>{
-      player.seekTo(time);
+    const [player, setPlayer] = useState({});
+    const opts = {
+        height: '780',
+        width: '1280',
+        playerVars: {
+            autoplay: 0,
+        },
+    };
+
+    const changeTime = (time) => {
+        player.seekTo(time);
     }
 
-        return(
+    return (
         <>
             <h1>Testing React-Youtube</h1>
-            <Youtube videoId="kaImho5JioI" opts={opts} onReady={_onReady} />
-            <button onClick={() => changeTime(300)}>Go to 5:00</button>
-            <button onClick={() => changeTime(600)}>Go to 10:00</button>
-            
+            <Youtube videoId={videoid} opts={opts} onReady={_onReady} />
+            <button onClick={() => changeTime(60)}>Go to 1:00</button>
+            <button onClick={() => changeTime(120)}>Go to 2:00</button>
+
         </>
-        
-        );
-    
+
+    );
+
     function _onReady(event) {
-        // access to player in all event handlers via event.target
         setPlayer(event.target);
-      }
+    }
 };
 
 export default VideoPlayer;
