@@ -1,4 +1,4 @@
-import { Query } from "./index";
+import { Query } from "./query-helper";
 
 const getAllTimestamps = () => {
     return Query("SELECT * FROM timestamps;");
