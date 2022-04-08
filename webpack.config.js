@@ -51,4 +51,27 @@ let clientConfig = {
 	}
 };
 
-module.exports = [serverConfig, clientConfig];
+
+let imageConfig = {
+	mode: process.env.NODE_ENV || 'development',
+	entry: './client/index.jsx',
+	output: {
+		path: path.join(__dirname, './public/js/'),
+		filename: 'app.js'
+	},
+	module: {
+		rules: [
+		  {
+			test: /\.(png|jpe?g|gif)$/i,
+			use: [
+			  {
+				loader: 'file-loader',
+			  },
+			],
+		  },
+		],
+	  },
+	};
+
+
+module.exports = [serverConfig, clientConfig, imageConfig];
