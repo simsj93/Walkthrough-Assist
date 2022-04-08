@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import './App.css';
 import { useParams } from "react-router-dom"
 import Youtube from "react-youtube";
 
 
 
-const RealVideoPlayer = () => {
+const VideoPlayer = () => {
 
     const { videoid } = useParams();
 
@@ -38,4 +37,4 @@ const RealVideoPlayer = () => {
     }
 };
 
-export default RealVideoPlayer;
+export default VideoPlayer;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ContentCards = () => {
   return (
@@ -13,7 +14,9 @@ const ContentCards = () => {
             inputs and outputs. The video covers props, hooks, conditional
             renders, and more.
           </p>
-          <button className="btn btn-primary">Play Video</button>
+          <Link to={"/videos/-bKp6Kt_YNI"}>
+            <button className="btn btn-primary">Play Video</button>
+          </Link>
         </div>
       </div>
       <div className="card">
