@@ -1,25 +1,27 @@
-// import * as mysql from "mysql";
+import * as mysql from "mysql";
 
-// const connection = mysql.createConnection({
-//     host: 'localhost',
-//     port: 3306,
-//     database: "c16_chirpr",
-//     user: 'chirprapp',
-//     password: 'password'
-// });
+const connection = mysql.createConnection({
+    host: 'localhost',
+    port: 3306,
+    database: "walkthrough_assist",
+    user: 'wassistant',
+    password: 'MayIAssistU'
+});
 
-// export const Query = (query, values) => {
-//     return new Promise((resolve, reject) => {
-//         connection.query(query, values, (err, results) => {
-//             if (err) throw err;
-//             resolve(results);
-//         });
-//     });
-// }
+export const Query = (query, values) => {
+    return new Promise((resolve, reject) => {
+        connection.query(query, values, (err, results) => {
+            if (err) throw err;
+            resolve(results);
+        });
+    }); 
+}
 
-// import chirps from "./example";
+import videos from "./videos";
+import timestamps from "./timestamps";
 
 // // this becomes db object in routes/chirps.js
-// export default {
-//     chirps
-// }
+export default {
+    videos,
+    timestamps
+};
