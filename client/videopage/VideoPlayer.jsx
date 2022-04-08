@@ -23,6 +23,7 @@ const VideoPlayer = () => {
 
     return (
         <>
+            <h1>lol</h1>
             <h1>Testing React-Youtube</h1>
             <Youtube videoId={videoid} opts={opts} onReady={_onReady} />
             <button onClick={() => changeTime(60)}>Go to 1:00</button>
