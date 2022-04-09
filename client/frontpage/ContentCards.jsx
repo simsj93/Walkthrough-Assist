@@ -1,74 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const ContentCards = () => {
+  const [videos, setVideos] = useState([]);
+
+//call back-end API endpoint to retreive info for all videos
+  useEffect(() => {
+    fetch("/api/videos")
+    .then(res => res.json())
+    .then(videos => { setVideos(videos)})
+    .catch((error) => 
+    {console.log(error);
+    alert("Sorry, we could not load the video list!")
+    })
+  }, []);
+
+
   return (
-    <div className="card-deck container">
-      <div className="card">
-        <div className="card-body">
-          <h4 className="card-title text-primary">Reacting to React </h4>
-          <p className="card-text">
-            Learn best practices for setting up a new React project with the
-            Create-React-App environment. In this video, the instructor
-            demonstrates fundamental React features you can use to create simple
-            inputs and outputs. The video covers props, hooks, conditional
-            renders, and more.
-          </p>
-          <Link to={"/videos/-bKp6Kt_YNI"}>
-            <button className="btn btn-primary">Play Video</button>
-          </Link>
-        </div>
+    <>
+      <div className="card-deck container">
+        {videos.map((video) => {return (
+        <>
+          <div className="card">
+            <div className="card-body">
+              <h4 className="card-title text-primary">{video.subject}</h4>
+              <p>{video.description}</p>
+              {/*The YouTube id for a video can be extracted from the URL linking to it
+               by stripping off the prefix "https://www.youtube.com/watch?v="*/}
+              <Link to={`videos/${video.url.slice(32)}`}>
+                <button className="btn btn-primary">Play Video</button>
+              </Link>
+            </div>
+          </div>
+          </>)
+        }
+        )}
       </div>
-      <div className="card">
-        <div className="card-body">
-          <h4 className="card-title">Express JS</h4>
-          <p className="card-text">
-            Get a handle on backend technologies by following along as our
-            instructor demonstrates how to create a new project using npm init,
-            add an express server, and much more.
-          </p>
-          <button className="btn btn-primary"> Play Video</button>
-        </div>
-      </div>
-      <div className="card">
-        <div className="card-body">
-          <h4 className="card-title">OOP Drills</h4>
-          <p className="card-text">
-            The OOP Drills video focuses on the concepts and syntax found in
-            object-oriented programming. Watch our instructor demonstrate object
-            literals, pseudo-classes, object instantiation, methods, and
-            inheritance. This video is code-along friendly for tactile learners.
-          </p>
-          <button className="btn btn-primary">Play Video</button>
-        </div>
-      </div>
-      <div className="card">
-        <div className="card-body">
-          <h4 className="card-title">Chirper Front-end </h4>
-          <p className="card-text">
-            Want to build a front-end application using React? This engaging
-            demonstration walks learners through building a simple React app.
-            Our instructor covers core React web development with
-            easy-to-understand examples. The lesson features UUID and moment.js.
-          </p>
-          <button className="btn btn-primary">Play Video</button>
-        </div>
-      </div>
-      <div className="card">
-        <div className="card-body">
-          <h4 className="card-title">Chirp it Up - Full Stack Style</h4>
-          <p className="card-text">
-            The behemoth Chirp it Up - Full Stack Style walkthrough is now
-            condensed into a more learner-friendly video. The video's objective
-            is to connect the chirpr schema with the database to make a
-            front-to-back application. Learn how to create a MySQL database, set
-            up Node.JS for the backend, and use React for the front-end.
-          </p>
-          <button className="btn btn-primary">Play Video</button>
-        </div>
-      </div>
-    </div>
-  );
-};
+    </>
+  )
+}
 
 export default ContentCards;
