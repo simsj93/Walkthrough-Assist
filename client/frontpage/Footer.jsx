@@ -3,10 +3,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <div className=" header container-fluid ">
+      <footer className="footer container-fluid my-5">
       <p>&copy; TeamOne {new Date().getFullYear()}.All rights reserved.</p>
        {/* <a href="https://github.com/WyattTech/Cohort16_Walkthrough-Assist"><FaGithub /></a> */}
     </footer>
+    </div>
   );
 };
 
