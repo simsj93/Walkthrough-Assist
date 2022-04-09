@@ -1,12 +1,12 @@
-import React from 'react';
-
+import React, { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import About from "./About.jsx";
 import ContentCards from "./ContentCards.jsx";
 import FrontNavbar from "../components/Navbar.jsx";
 import Footer from "./Footer.jsx";
 
-const Home = () => {
+const FrontPage = () => {
   return (
     <>
       <FrontNavbar />
@@ -15,10 +15,9 @@ const Home = () => {
         <About />
         <ContentCards />
         <Footer />
-
       </section>
     </>
   );
 };
 
-export default Home;
+export default FrontPage;
