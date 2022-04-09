@@ -11,7 +11,6 @@ const FrontPage = () => {
     <>
       <FrontNavbar />
       <section className="container">
-        <h1>test</h1>
         <About />
         <ContentCards />
         <Footer />
