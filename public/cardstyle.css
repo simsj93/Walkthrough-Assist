@@ -9,6 +9,7 @@
     color: rgba(250, 250, 250, 0.8);
     margin-bottom: 2rem;
     min-height: 28rem;
+    width: 18rem;
   }
   
   .btn {
@@ -20,6 +21,7 @@
     border-image-source:  var(--gradient) !important; 
     text-decoration: none;
     transition: all .4s ease;
+    width: 8rem; 
   }
   
   .btn:hover, .btn:focus {
