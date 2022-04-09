@@ -20,12 +20,9 @@
 * {
   margin: 0;
   padding: 0;
+ 
   box-sizing: border-box;
 }
-html {
-    height: 100%;
-    scroll-behavior: smooth;
-  }
 
 body {
   margin: 0;
@@ -54,8 +51,8 @@ body {
 .logo {
   padding: 0;
   margin: 1em;
-  width: 185px;
-  height: 185px;
+  width: 165px;
+  height: 165px;
   border-radius: 3px;
   object-fit: contain;
   clip-path: circle(50% at 50% 50%);
@@ -95,11 +92,30 @@ p {
 /* Footer Styling*/
 
 .footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
+}
+
+a{
+  color: white;
+}
+a:link {
+  font-size: 1.25em;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
   color: var(--accentColor3);
 }
 
 .btn-mode{
+  outline: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 100px;
