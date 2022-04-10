@@ -9,7 +9,7 @@ const FrontNavbar = () => {
 
   return (
     <div className="index container-fluid">
-      <div lassName=" container-fluid">
+      <div className=" container-fluid">
         <header className=" container-fluid header">
           <section>
             <img src={Logo} alt="logo" className="logo" />
