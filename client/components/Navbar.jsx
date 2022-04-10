@@ -1,26 +1,27 @@
-import React from 'react'
+import React from "react";
 import Logo from "../assets/logo2.jpg";
 
-
 const FrontNavbar = () => {
-
-
   function myFunction() {
-  var element = document.body;
-  element.classList.toggle("light-mode");
-}
+    var element = document.body;
+    element.classList.toggle("light-mode");
+  }
 
   return (
-    <header className='container-fluid  d-inline-flex  header'>
-      <section>
-        <img src={Logo} alt="logo" className='logo'/> 
-      </section>
-     
-    <div className='d-flex' >
-    <button className='btn-mode' onClick={myFunction} >New Mode</button>
+    <div className="index container-fluid">
+      <div lassName=" container-fluid">
+        <header className=" container-fluid header">
+          <section>
+            <img src={Logo} alt="logo" className="logo" />
+          </section>
+        </header>
+        <div className=" flex-container ">
+          <button className="btn-mode flex-item" onClick={myFunction}>
+            New Mood
+          </button>
+        </div>
+      </div>
     </div>
-     
-    </header>
   );
 };
 
