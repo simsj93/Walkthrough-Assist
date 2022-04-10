@@ -1,24 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+
 const ContentCards = () => {
   const [videos, setVideos] = useState([]);
 
-  //call back-end API endpoint to retreive info for all videos
-  useEffect(() => {
+   //call back-end API endpoint to retreive info for all videos
+   useEffect(() => {
     fetch("/api/videos")
-      .then(res => res.json())
-      .then(videos => { setVideos(videos) })
-      .catch((error) => {
-        console.log(error);
-        alert("Sorry, we could not load the video list!")
-      })
-  }, []);
+
+    .then(res => res.json())
+    .then(videos => { setVideos(videos) })
+    .catch((error) => {
+      console.log(error);
+      alert("Sorry, we could not load the video list!")
+    })
+}, []);
 
 
-  return (
-    <>
-      <div className="selection">
+return (
+  <>
+   <div className="selection">
         <div className="container mx-auto mt-4">
           {videos.map((video) => {
             return (
@@ -47,6 +49,6 @@ const ContentCards = () => {
       </div>
     </>
   )
-}
 
+}
 export default ContentCards;

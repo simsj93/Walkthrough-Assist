@@ -17,6 +17,9 @@ const VideoPlayer = () => {
         },
     };
 
+    // fetch from /api/timestamps/videoid
+
+
     const changeTime = (time) => {
         player.seekTo(time);
     }
@@ -25,6 +28,7 @@ const VideoPlayer = () => {
         <>
             <h1>Testing React-Youtube</h1>
             <Youtube videoId={videoid} opts={opts} onReady={_onReady} />
+            {/* map things on clicker here*/}
             <button onClick={() => changeTime(60)}>Go to 1:00</button>
             <button onClick={() => changeTime(120)}>Go to 2:00</button>
 
