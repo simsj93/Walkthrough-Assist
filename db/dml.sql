@@ -237,3 +237,51 @@ VALUES((SELECT id from concepts WHERE name = "Object Oriented Programming"),
 INSERT INTO videos_to_concepts (concept_id, video_id)
 VALUES((SELECT id from concepts where name = "Object Oriented Programming"), 
 (SELECT id from videos where subject = "OOP Drills"));
+
+INSERT INTO videos_to_concepts (concept_id, video_id)
+VALUES((SELECT id from concepts WHERE name = "Object Oriented Programming"), 
+(SELECT id from videos WHERE subject = "OOP Drills")),
+((SELECT id from concepts WHERE name = "Javascript Classes"), 
+(SELECT id from videos WHERE subject = "OOP Drills")),
+((SELECT id from concepts WHERE name = "Variable Scope"),
+(SELECT id from videos WHERE subject = "OOP Drills")),
+((SELECT id from concepts WHERE name = "Type Coercion"), 
+(SELECT id from videos WHERE subject = "OOP Drills")),
+((SELECT id from concepts WHERE name = "Syntactic Sugar"), 
+(SELECT id from videos WHERE subject = "OOP Drills"));
+
+INSERT INTO videos_to_concepts (concept_id, video_id)
+VALUES((SELECT id from concepts WHERE name = "Middleware"), 
+(SELECT id from videos WHERE subject = "Express JS")),
+((SELECT id from concepts WHERE name = "HTTP Methods"), 
+(SELECT id from videos WHERE subject = "Express JS"));
+
+INSERT INTO videos_to_concepts (concept_id, video_id)
+VALUES((SELECT id from concepts WHERE name = "Front-End"), 
+(SELECT id from videos WHERE subject = "Chirp It Up - Full Stack Style - Frontend")),
+((SELECT id from concepts WHERE name = "CRUD Methods"), 
+(SELECT id from videos WHERE subject = "Chirp It Up - Full Stack Style - Frontend")),
+((SELECT id from concepts WHERE name = "Fetch"), 
+(SELECT id from videos WHERE subject = "Chirp It Up - Full Stack Style - Frontend"));
+
+INSERT INTO videos_to_concepts (concept_id, video_id)
+VALUES((SELECT id from concepts WHERE name = "useState"), 
+(SELECT id from videos WHERE subject = "Chirper Front-end")),
+((SELECT id from concepts WHERE name = "Map Method"), 
+(SELECT id from videos WHERE subject = "Chirper Front-end")),
+((SELECT id from concepts WHERE name = "JSX"),
+(SELECT id from videos WHERE subject = "Chirper Front-end"));
+
+INSERT INTO videos_to_concepts (concept_id, video_id)
+VALUES((SELECT id from concepts WHERE name = "Create-react-app"), 
+(SELECT id from videos WHERE subject = "Reacting To React")),
+((SELECT id from concepts WHERE name = "Components & Props"), 
+(SELECT id from videos WHERE subject = "Reacting To React")),
+((SELECT id from concepts WHERE name = "JSX component"),
+(SELECT id from videos WHERE subject = "Reacting To React")),
+((SELECT id from concepts WHERE name = "Controlled react input"),
+(SELECT id from videos WHERE subject = "Reacting To React")),
+((SELECT id from concepts WHERE name = "Conditional render"), 
+(SELECT id from videos WHERE subject = "Reacting To React")),
+((SELECT id from concepts WHERE name = "useEffect & useState hooks"), 
+(SELECT id from videos WHERE subject = "Reacting To React"));
