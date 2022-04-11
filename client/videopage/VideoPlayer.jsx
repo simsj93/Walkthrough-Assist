@@ -28,6 +28,8 @@ const VideoPlayer = () => {
             <button onClick={() => changeTime(60)}>Go to 1:00</button>
             <button onClick={() => changeTime(120)}>Go to 2:00</button>
 
+            <div style={{width:'18rem', height:'18rem'}}> test for timestamp list</div>
+
         </>
 
     );
