@@ -1,21 +1,27 @@
-// import Logo from "./logo2.jpg";
-import React from 'react'
+import React from "react";
 import Logo from "../assets/logo2.jpg";
-import { NavLink } from "react-router-dom";
-
-
 
 const FrontNavbar = () => {
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("light-mode");
+  }
+
   return (
-    <header className='container-fluid  header'>
-      <section>
-        <img src={Logo} alt="logo" className='logo' /> 
-      </section>
-      <nav>
-        <NavLink to="/">Resources</NavLink>
-      </nav>
-     
-    </header>
+    <div className="index container-fluid">
+      <div lassName=" container-fluid">
+        <header className=" container-fluid header">
+          <section>
+            <img src={Logo} alt="logo" className="logo" />
+          </section>
+        </header>
+        <div className=" flex-container ">
+          <button className="btn-mode flex-item" onClick={myFunction}>
+            New Mood
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
