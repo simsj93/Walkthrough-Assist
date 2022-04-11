@@ -239,9 +239,7 @@ VALUES((SELECT id from concepts where name = "Object Oriented Programming"),
 (SELECT id from videos where subject = "OOP Drills"));
 
 INSERT INTO videos_to_concepts (concept_id, video_id)
-VALUES((SELECT id from concepts WHERE name = "Object Oriented Programming"), 
-(SELECT id from videos WHERE subject = "OOP Drills")),
-((SELECT id from concepts WHERE name = "Javascript Classes"), 
+VALUES((SELECT id from concepts WHERE name = "Javascript Classes"), 
 (SELECT id from videos WHERE subject = "OOP Drills")),
 ((SELECT id from concepts WHERE name = "Variable Scope"),
 (SELECT id from videos WHERE subject = "OOP Drills")),
