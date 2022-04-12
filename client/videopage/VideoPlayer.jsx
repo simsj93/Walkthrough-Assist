@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { useParams } from "react-router-dom"
+import React, { useEffect, useState } from 'react';
+import { useParams, useLocation } from "react-router-dom"
 import Youtube from "react-youtube";
+import Accordion from "../components/Accordion.jsx"
 
 
 
@@ -9,6 +10,11 @@ const VideoPlayer = () => {
     const { videoid } = useParams();
 
     const [player, setPlayer] = useState({});
+    const [timestamps, setTimestamps] = useState([]);
+
+    const location = useLocation();
+    const {id} = location.state;
+
     const opts = {
         height: '780',
         width: '1280',
@@ -17,17 +23,42 @@ const VideoPlayer = () => {
         },
     };
 
+    useEffect(() => {
+        fetch(`/api/timestamps/v=${id}`)
+        .then(res => res.json())
+        .then(timestamps => {
+            setTimestamps(timestamps);
+        })
+        .catch(error => {
+            console.log(error);
+            alert("Sorry, we could not load timestamps for this video!");
+        });
+    }, []);
+
     const changeTime = (time) => {
         player.seekTo(time);
+    }
+
+    const timestampToSeconds = (time) => {
+        const [hours, minutes, seconds] = time.split(":");
+        let result = parseInt(hours)*3600 + parseInt(minutes)*60 + parseInt(seconds);
+        return result;
     }
 
     return (
         <>
             <h1>Testing React-Youtube</h1>
             <Youtube videoId={videoid} opts={opts} onReady={_onReady} />
-            <button onClick={() => changeTime(60)}>Go to 1:00</button>
-            <button onClick={() => changeTime(120)}>Go to 2:00</button>
-
+            {timestamps.map((timestamp) => {
+                    return(
+                    <p key={timestamp.id}>
+                        <button className='btn btn-primary'
+                        onClick={() => changeTime(timestampToSeconds(timestamp.start_time))}>
+                            {`${timestamp.subject} : ${timestamp.start_time}`}
+                        </button>
+                    </p>)
+                })}
+            <Accordion>lorem IEa6PjhKewJ2C3vQyWuzPTIssFs3PkeNfLwTBLtnQM9hxsAxnstes8xc4EX7AH9twp</Accordion>
         </>
 
     );
