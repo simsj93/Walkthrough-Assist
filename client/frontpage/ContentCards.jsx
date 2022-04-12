@@ -33,7 +33,8 @@ return (
                           <h5 className="card-title">{video.subject}</h5>
                           <p className="card-text">{video.description}</p>
                         </div>
-                        <Link to={`videos/${video.url.slice(32)}`}>
+                        <Link to={`videos/${video.url.slice(32)}`}
+                            state = {{id: video.id}}>
                           <div className="row mb-3 justify-content-center" id="watch-video">
                             <a href="#" className="btn mr-2"><i className="fas fa-link"></i>Watch Video</a>
                           </div>
