@@ -215,12 +215,43 @@ The variable 'sum' would print to '34' due to type coercion of value2."),
 ("useEffect & useState hooks",
 "Allows you to track state and perform side effects in function components.");
 
+-- OOP Drills
 INSERT INTO resources (url)
 VALUES ("https://www.w3schools.com/js/js_objects.asp"),
 ("https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects"),
 ("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"),
 ("https://www.w3schools.com/js/js_class_inheritance.asp"),
 ("https://www.w3schools.com/jsref/jsref_class_super.asp");
+
+-- Express JS
+INSERT INTO resources (url)
+VALUES ("https://expressjs.com/en/guide/using-middleware.html"),
+("https://www.tutorialspoint.com/expressjs/expressjs_middleware.htm"),
+("https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"),
+("https://www.tutorialspoint.com/http/http_methods.htm");
+
+-- Chirp It Up - Full Stack Style - Frontend
+INSERT INTO resources (url)
+VALUES ("https://www.codecademy.com/article/what-is-crud"),
+("https://www.educative.io/blog/crud-operations"),
+("https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch");
+
+-- Chirper Front-end
+INSERT INTO resources (url)
+VALUES ("https://www.w3schools.com/react/react_jsx.asp"),
+("https://www.w3schools.com/react/react_usestate.asp"),
+("https://reactjs.org/docs/components-and-props.html"),
+("https://www.freecodecamp.org/news/array-map-tutorial/"),
+("https://www.npmjs.com/package/dayjs");
+
+-- Reacting To React
+INSERT INTO resources (url)
+VALUES ("https://create-react-app.dev/docs/getting-started"),
+("https://reactjs.org/docs/jsx-in-depth.html"),
+("https://reactjs.org/docs/components-and-props.html"),
+("https://reactjs.org/docs/conditional-rendering.html"),
+("https://www.w3schools.com/react/react_hooks.asp"),
+("https://www.youtube.com/watch?v=rb1GWqCJid4");
 
 INSERT INTO concepts_to_resources (concept_id, resource_id)
 VALUES((SELECT id from concepts WHERE name = "Object Oriented Programming"),
@@ -233,10 +264,6 @@ VALUES((SELECT id from concepts WHERE name = "Object Oriented Programming"),
 (SELECT id from resources WHERE url = "https://www.w3schools.com/js/js_class_inheritance.asp")),
 ((SELECT id from concepts WHERE name = "Javascript Classes"),
 (SELECT id from resources WHERE url = "https://www.w3schools.com/jsref/jsref_class_super.asp"));
-
-INSERT INTO videos_to_concepts (concept_id, video_id)
-VALUES((SELECT id from concepts where name = "Object Oriented Programming"), 
-(SELECT id from videos where subject = "OOP Drills"));
 
 INSERT INTO videos_to_concepts (concept_id, video_id)
 VALUES((SELECT id from concepts WHERE name = "Object Oriented Programming"), 
@@ -284,4 +311,60 @@ VALUES((SELECT id from concepts WHERE name = "Create-react-app"),
 ((SELECT id from concepts WHERE name = "Conditional render"), 
 (SELECT id from videos WHERE subject = "Reacting To React")),
 ((SELECT id from concepts WHERE name = "useEffect & useState hooks"), 
+(SELECT id from videos WHERE subject = "Reacting To React"));
+
+INSERT INTO videos_to_resources (resource_id, video_id)
+VALUES((SELECT id from resources WHERE url = "https://www.w3schools.com/js/js_objects.asp"), 
+(SELECT id from videos WHERE subject = "OOP Drills")),
+((SELECT id from resources WHERE url = "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects"), 
+(SELECT id from videos WHERE subject = "OOP Drills")),
+((SELECT id from resources WHERE url = "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"), 
+(SELECT id from videos WHERE subject = "OOP Drills")),
+((SELECT id from resources WHERE url = "https://www.w3schools.com/js/js_class_inheritance.asp"), 
+(SELECT id from videos WHERE subject = "OOP Drills")),
+((SELECT id from resources WHERE url = "https://www.w3schools.com/jsref/jsref_class_super.asp"), 
+(SELECT id from videos WHERE subject = "OOP Drills"));
+
+INSERT INTO videos_to_resources (resource_id, video_id)
+VALUES((SELECT id from resources WHERE url = "https://expressjs.com/en/guide/using-middleware.html"), 
+(SELECT id from videos WHERE subject = "Express JS")),
+((SELECT id from resources WHERE url = "https://www.tutorialspoint.com/expressjs/expressjs_middleware.htm"), 
+(SELECT id from videos WHERE subject = "Express JS")),
+((SELECT id from resources WHERE url = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"), 
+(SELECT id from videos WHERE subject = "Express JS")),
+((SELECT id from resources WHERE url = "https://www.tutorialspoint.com/http/http_methods.htm"), 
+(SELECT id from videos WHERE subject = "Express JS"));
+
+INSERT INTO videos_to_resources (resource_id, video_id)
+VALUES((SELECT id from resources WHERE url = "https://www.codecademy.com/article/what-is-crud"), 
+(SELECT id from videos WHERE subject = "Chirp It Up - Full Stack Style - Frontend")),
+((SELECT id from resources WHERE url = "https://www.educative.io/blog/crud-operations"), 
+(SELECT id from videos WHERE subject = "Chirp It Up - Full Stack Style - Frontend")),
+((SELECT id from resources WHERE url = "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"),  
+(SELECT id from videos WHERE subject = "Chirp It Up - Full Stack Style - Frontend"));
+
+INSERT INTO videos_to_resources (resource_id, video_id)
+VALUES((SELECT id from resources WHERE url = "https://www.w3schools.com/react/react_jsx.asp"), 
+(SELECT id from videos WHERE subject = "Chirper Front-end")),
+((SELECT id from resources WHERE url = "https://www.w3schools.com/react/react_usestate.asp"), 
+(SELECT id from videos WHERE subject = "Chirper Front-end")),
+((SELECT id from resources WHERE url = "https://reactjs.org/docs/components-and-props.html"), 
+(SELECT id from videos WHERE subject = "Chirper Front-endOOP Drills")),
+((SELECT id from resources WHERE url = "https://www.freecodecamp.org/news/array-map-tutorial/"), 
+(SELECT id from videos WHERE subject = "Chirper Front-end")),
+((SELECT id from resources WHERE url = "https://www.npmjs.com/package/dayjs"), 
+(SELECT id from videos WHERE subject = "Chirper Front-end"));
+
+INSERT INTO videos_to_resources (resource_id, video_id)
+VALUES((SELECT id from resources WHERE url = "https://create-react-app.dev/docs/getting-started"), 
+(SELECT id from videos WHERE subject = "Reacting To React")),
+((SELECT id from resources WHERE url = "https://reactjs.org/docs/jsx-in-depth.html"), 
+(SELECT id from videos WHERE subject = "Reacting To React")),
+((SELECT id from resources WHERE url = "https://reactjs.org/docs/components-and-props.html"), 
+(SELECT id from videos WHERE subject = "Reacting To React")),
+((SELECT id from resources WHERE url = "https://reactjs.org/docs/conditional-rendering.html"), 
+(SELECT id from videos WHERE subject = "Reacting To React")),
+((SELECT id from resources WHERE url = "https://www.w3schools.com/react/react_hooks.asp"), 
+(SELECT id from videos WHERE subject = "Reacting To React")),
+((SELECT id from resources WHERE url = "https://www.youtube.com/watch?v=rb1GWqCJid4"), 
 (SELECT id from videos WHERE subject = "Reacting To React"));
