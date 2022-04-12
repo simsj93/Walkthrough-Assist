@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx"
 import FrontPage from "./frontpage/FrontPage.jsx";
 import VideoPlayer from "./videopage/VideoPlayer.jsx";
 
