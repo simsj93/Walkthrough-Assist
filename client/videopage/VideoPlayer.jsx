@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from "react-router-dom"
 import Youtube from "react-youtube";
 import Accordion from "../components/Accordion.jsx"
+import Navbar from '../components/Navbar.jsx';
 
 
 
@@ -47,7 +48,7 @@ const VideoPlayer = () => {
 
     return (
         <>
-            <h1>Testing React-Youtube</h1>
+           <Navbar />
             <Youtube videoId={videoid} opts={opts} onReady={_onReady} />
             {timestamps.map((timestamp) => {
                     return(
