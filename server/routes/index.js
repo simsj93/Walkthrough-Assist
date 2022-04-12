@@ -1,5 +1,5 @@
 import * as express from "express";
-import timestamps from "../db/timestamps";
+// import timestamps from "../db/timestamps";
 const router = express.Router();
 import videosRouter from "./videos";
 import timestampsRouter from "./timestamps";

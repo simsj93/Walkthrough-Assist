@@ -12,6 +12,8 @@ const VideoPlayer = () => {
 
     const [player, setPlayer] = useState({});
     const [timestamps, setTimestamps] = useState([]);
+    const [concepts, setConcepts] = useState([]); 
+    const [resources, setResources] = useState([]); 
 
     const location = useLocation();
     const {id} = location.state;
@@ -36,6 +38,30 @@ const VideoPlayer = () => {
         });
     }, []);
 
+    useEffect(() => {
+        fetch(`/api/concepts/v=${id}`)
+        .then(res => res.json())
+        .then(concepts => {
+            setConcepts(concepts);
+        })
+        .catch(error => {
+            console.log(error);
+            alert("Error loading concepts.")
+        })
+    }, []);
+
+    useEffect(() => {
+        fetch(`/api/resources/v=${id}`)
+        .then(res => res.json())
+        .then(resources => {
+            setResources(resources);
+        })
+        .catch(error => {
+            console.log(error);
+            alert("Error loading resources.")
+        })
+    }, []);
+
     const changeTime = (time) => {
         player.seekTo(time);
     }
@@ -52,14 +78,19 @@ const VideoPlayer = () => {
             <Youtube videoId={videoid} opts={opts} onReady={_onReady} />
             {timestamps.map((timestamp) => {
                     return(
+                        
                     <p key={timestamp.id}>
                         <button className='btn btn-primary'
                         onClick={() => changeTime(timestampToSeconds(timestamp.start_time))}>
                             {`${timestamp.subject} : ${timestamp.start_time}`}
                         </button>
-                    </p>)
+                    </p>
+                    )
                 })}
-            <Accordion>lorem IEa6PjhKewJ2C3vQyWuzPTIssFs3PkeNfLwTBLtnQM9hxsAxnstes8xc4EX7AH9twp</Accordion>
+    
+                    <Accordion conceptList = {concepts} resourceList = {resources}/>
+                
+           
         </>
 
     );

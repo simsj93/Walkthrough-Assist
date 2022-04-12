@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 
 // The basic way to have accordian menus in a const, with the first being open automatically and the rest being closed:
-const Accordion = () => {
+const Accordion = (props) => {
 
 
     return (
@@ -20,7 +20,16 @@ const Accordion = () => {
 
                 <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div className="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <ul>
+                      {props.conceptList.map(concept => { 
+                          return (
+                          <li>
+                            <h1>{concept.name}</h1>
+                          <p>{concept.explanation}</p>
+                          </li>
+                          )
+                      })}
+                      </ul>
                     </div>
                 </div>
             </div>
@@ -34,7 +43,15 @@ const Accordion = () => {
                 </div>
                 <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div className="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <ul>
+                      {props.resourceList.map(resource => { 
+                          return (
+                          <li>
+                            <h1>{resource.url}</h1>
+                          </li>
+                          )
+                      })}
+                      </ul>
                     </div>
                 </div>
             </div>
