@@ -4,14 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./About.jsx";
 import ContentCards from "./ContentCards.jsx";
 import FrontNavbar from "../components/Navbar.jsx";
-import Footer from "./Footer.jsx";
+import Footer from "../components/Footer.jsx";
 
 const FrontPage = () => {
   return (
     <>
-      <FrontNavbar />
+      <FrontNavbar  />
       <section className="container">
-        <h1>test</h1>
         <About />
         <ContentCards />
         <Footer />

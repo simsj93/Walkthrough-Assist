@@ -1,6 +1,6 @@
 // This is an example of what would go in this file. Feel free to delete/overwrite these contents and rename the file. Remember to make a seperate file for each database table!
 
-// import { Query } from "./index";
+import { Query } from "./query-helper";
 
 // const all = () => Query("select chirps.id, chirps.content, chirps._created, users.name from chirps join users on chirps.userid = users.id");
 
@@ -20,3 +20,16 @@
 //     insert,
 //     edit
 // }
+
+const getVideos = () => {
+    return Query("SELECT * FROM videos;")
+}
+
+const getVideoByID = (id) => {
+    return Query("SELECT * FROM videos WHERE ID = ?;", [id]);
+}
+
+export default {
+    getVideos,
+    getVideoByID
+};
