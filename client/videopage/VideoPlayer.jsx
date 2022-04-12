@@ -5,7 +5,7 @@ import Accordion from "../components/Accordion.jsx"
 
 
 
-const VideoPlayer = () => {
+const VideoPlayer = (props) => {
 
     const { videoid } = useParams();
 
@@ -39,6 +39,8 @@ const VideoPlayer = () => {
         player.seekTo(time);
     }
 
+    //helper function that takes a timestamp of the form "HH:MM:SS"
+    //and returns the total number of seconds
     const timestampToSeconds = (time) => {
         const [hours, minutes, seconds] = time.split(":");
         let result = parseInt(hours)*3600 + parseInt(minutes)*60 + parseInt(seconds);
@@ -49,6 +51,7 @@ const VideoPlayer = () => {
         <>
             <h1>Testing React-Youtube</h1>
             <Youtube videoId={videoid} opts={opts} onReady={_onReady} />
+
             {timestamps.map((timestamp) => {
                     return(
                     <p key={timestamp.id}>
