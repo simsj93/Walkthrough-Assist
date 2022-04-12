@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from "react-router-dom"
 import Youtube from "react-youtube";
+import Accordion from "../components/Accordion.jsx"
 
 
 
@@ -50,17 +51,17 @@ const VideoPlayer = (props) => {
         <>
             <h1>Testing React-Youtube</h1>
             <Youtube videoId={videoid} opts={opts} onReady={_onReady} />
-            <ul>
-                {timestamps.map((timestamp) => {
+
+            {timestamps.map((timestamp) => {
                     return(
-                    <li key={timestamp.id}>
+                    <p key={timestamp.id}>
                         <button className='btn btn-primary'
                         onClick={() => changeTime(timestampToSeconds(timestamp.start_time))}>
                             {`${timestamp.subject} : ${timestamp.start_time}`}
                         </button>
-                    </li>)
+                    </p>)
                 })}
-            </ul>
+            <Accordion>lorem IEa6PjhKewJ2C3vQyWuzPTIssFs3PkeNfLwTBLtnQM9hxsAxnstes8xc4EX7AH9twp</Accordion>
         </>
 
     );
