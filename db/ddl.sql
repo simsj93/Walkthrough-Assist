@@ -52,7 +52,7 @@ CREATE TABLE concepts_to_resources (
     CONSTRAINT fk_cr_conceptid FOREIGN KEY (concept_id) REFERENCES concepts(id),
     CONSTRAINT fk_cr_resourceid FOREIGN KEY (resource_id) REFERENCES resources(id)
 );
---  I have not run this last one.
+
 CREATE TABLE videos_to_resources (
 video_id INT NOT NULL,
 resource_id INT NOT NULL,
