@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import LadyLaptop from "../assets/ladytypingloop.gif";
+
 const ContentCards = () => {
   const [videos, setVideos] = useState([]);
 

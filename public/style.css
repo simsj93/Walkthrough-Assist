@@ -39,8 +39,7 @@ body {
 }
 
 .light-mode {
-  background: rgb(171, 60, 141);
-  
+  background: rgb(194, 69, 155);
 }
 .index {
   margin: 0.225rem;
@@ -145,16 +144,16 @@ body {
   position: absolute;
   top: 5.75rem;
   color: #ffffff;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.nav-item1:hover{
+.nav-item1:hover {
   color: var(--Dark);
 }
 
 /*About Styling*/
 .section {
-  background:#151515;
+  background: #151515;
   /* background-color: transparent; */
   border: 0.55rem double var(--accentColor3);
   opacity: 0.85;
@@ -164,9 +163,8 @@ body {
   box-shadow: 6px 9px 37px 3px rgba(235, 222, 251, 0.47);
   -webkit-box-shadow: 6px 9px 37px 3px rgba(235, 222, 251, 0.47);
   columns: 3;
-  
 }
-.span-about{
+.span-about {
   color: var(--accentColor1);
 }
 .h5 {
@@ -188,7 +186,22 @@ p {
 }
 
 /* Footer Styling*/
-
+/*https://cdn.dribbble.com/users/252024/screenshots/2967356/ladytypingloop.gif*/
+.image {
+  position: absolute;
+  top: 1275px;
+  left: 900px;
+  width: 365px;
+  height: 455px;
+  border-radius: 50%;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 25;
+  transform: translate(-50%, -50%);
+}
 .footer {
   text-align: center;
 }
@@ -209,6 +222,7 @@ a:hover {
   color: var(--accentColor3);
 }
 
+/*New Mood Btn Styling*/
 .btn-mode {
   border: none;
   outline: none;
@@ -227,6 +241,6 @@ a:hover {
   cursor: pointer;
 }
 
-.btn-mode:hover{
-   color: var(--Light);
+.btn-mode:hover {
+  color: var(--Light);
 }
