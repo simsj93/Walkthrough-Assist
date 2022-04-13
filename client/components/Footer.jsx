@@ -1,13 +1,11 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import  LadyLaptop  from "../assets/ladytypingloop.gif";
+
 
 const Footer = () => {
   return (
     <>
-    <section className="container">
-     <img src={LadyLaptop} alt="ladyOnLaptop" className="image" />
-    </section>
+  
     <div className="footer mt-3 p-2">
       <footer className="p-2">
       <p>&copy; TeamOne {new Date().getFullYear()}. All rights reserved.</p>

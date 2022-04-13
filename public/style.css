@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;900&display=swap");
 :root {
-  --Dark: #370c6c; /*Dark Violet */
+  --Dark: #330538; /*Dark Violet */
   --Light: #ebdefb; /*Grayish Violet */
   --accentColor1: #4da5bb; /* Moderate Cyan*/
   --accentColor2: linear-gradient(
@@ -188,9 +188,6 @@ p {
 /* Footer Styling*/
 /*https://cdn.dribbble.com/users/252024/screenshots/2967356/ladytypingloop.gif*/
 .image {
-  position: absolute;
-  top: 1275px;
-  left: 900px;
   width: 365px;
   height: 455px;
   border-radius: 50%;
