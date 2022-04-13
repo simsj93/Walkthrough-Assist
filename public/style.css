@@ -141,7 +141,7 @@ body {
   order: 0;
   padding-right: 2.65rem;
   position: absolute;
-  top: 5.75rem;
+  top: 4.5rem;
   color: #ffffff;
   cursor:pointer;
 }
@@ -339,7 +339,7 @@ a:hover {
 
 
 .YTdiv {
-  width: 50%
+  width: 50%;
 }
 
 #scrollbox {
@@ -363,5 +363,25 @@ a:hover {
   border-image-source:  var(--gradient) !important; 
   text-decoration: none;
   transition: all .4s ease;
-  width: 20rem;
+  width: 8rem;
+  margin-right: 10px;
 }
+
+.TSDiv {
+  display: flex;
+  align-content: flex-end;
+}
+
+
+#p-tag{
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+#ts-col {
+  display: flex;
+  justify-content: flex-end;
+}
+
+container-flu

@@ -79,23 +79,25 @@ const VideoPlayer = (props) => {
             <Navbar />
             <div className="container">
                 <div className="row">
-                    <div className="col">
+                    <div id = "YTvideo" className="col">
                         <div className="YTdiv">
                             <Youtube videoId={videoid} opts={opts} onReady={_onReady} />
                         </div>
                     </div>
-                    <div className="col">
-                        <div className="TSdiv d-inline-flex">
+                    <div id='ts-col' className="col">
+                        <div className="TSdiv">
                             <div id="scrollbox" className="card example-1 scrollbar-ripe-malinka d-flex">
                                 <div className="card-body">
                                     {timestamps.map((timestamp) => {
                                         return (
                                             <>
-                                                <div className="col-lg-5 text-center d-flex align-items-stretch" key={timestamp.id}>
-                                                    <button className='TSBtn my-1'
+                                                <div className="col-lg text-center d-flex align-items-stretch m-2" key={timestamp.id}>
+                                                    <button className='TSBtn my-1 mr-2'
+
                                                         onClick={() => changeTime(timestampToSeconds(timestamp.start_time))}>
-                                                        {`${timestamp.subject} : ${timestamp.start_time}`}
+                                                        {timestamp.start_time}
                                                     </button>
+                                                    <p id='p-tag' className="d-flex justify-content-center">{timestamp.subject}</p>
                                                 </div>
                                             </>
                                         )

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom"; 
+import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo2.jpg";
 
 const Navbar = () => {
@@ -14,15 +14,17 @@ const Navbar = () => {
         <header className=" container-fluid header">
           <section>
             <img src={Logo} alt="logo" className="logo" />
-            </section>
-            <section className="title-container">
+          </section>
+          <section className="title-container">
             <h1 className="h1-flex">TL;DW</h1>
           </section>
-          <nav nav className="nav">
-            <NavLink to="/" className="nav-item1">
-              Home
-            </NavLink>
-          </nav>
+          <section>
+            <nav id="homeNav" className="nav">
+              <NavLink to="/" className="nav-item1 fs-1">
+                Home
+              </NavLink>
+            </nav>
+          </section>
         </header>
         <div className=" flex-container ">
           <button className="btn-mode flex-item" onClick={myFunction}>
