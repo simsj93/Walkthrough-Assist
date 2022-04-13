@@ -23,10 +23,10 @@ const Accordion = (props) => {
                         <ul>
                       {props.conceptList.map(concept => { 
                           return (
-                          <li>
-                            <h1>{concept.name}</h1>
+                          <>
+                            <h5>{concept.name}</h5>
                           <p>{concept.explanation}</p>
-                          </li>
+                          </>
                           )
                       })}
                       </ul>
@@ -46,9 +46,10 @@ const Accordion = (props) => {
                     <ul>
                       {props.resourceList.map(resource => { 
                           return (
-                          <li>
-                            <h1>{resource.url}</h1>
-                          </li>
+                          <> <li>
+                            <a target={"_blank"} href={resource.url}>{resource.url}</a>
+                            </li>
+                          </>
                           )
                       })}
                       </ul>
