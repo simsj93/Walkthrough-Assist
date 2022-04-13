@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import About from "./About.jsx";
 import ContentCards from "./ContentCards.jsx";
 import Navbar from "../components/Navbar.jsx";

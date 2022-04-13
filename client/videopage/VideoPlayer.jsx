@@ -3,7 +3,7 @@ import { useParams, useLocation } from "react-router-dom"
 import Youtube from "react-youtube";
 import Accordion from "../components/Accordion.jsx"
 import Navbar from '../components/Navbar.jsx';
-
+import Footer from '../components/Footer.jsx';
 
 
 const VideoPlayer = (props) => {
@@ -111,7 +111,7 @@ const VideoPlayer = (props) => {
                     <Accordion conceptList={concepts} resourceList={resources} />
                 </div>
             </div>
-
+            <Footer />
         </>
 
     );
