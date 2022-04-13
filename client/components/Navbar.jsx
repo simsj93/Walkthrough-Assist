@@ -1,7 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom"; 
 import Logo from "../assets/logo2.jpg";
 
-const FrontNavbar = () => {
+const Navbar = () => {
   function myFunction() {
     var element = document.body;
     element.classList.toggle("light-mode");
@@ -13,7 +14,15 @@ const FrontNavbar = () => {
         <header className=" container-fluid header">
           <section>
             <img src={Logo} alt="logo" className="logo" />
+            </section>
+            <section className="title-container">
+            <h1 className="h1-flex">TL;DW</h1>
           </section>
+          <nav nav className="nav">
+            <NavLink to="/" className="nav-item1">
+              Home
+            </NavLink>
+          </nav>
         </header>
         <div className=" flex-container ">
           <button className="btn-mode flex-item" onClick={myFunction}>
@@ -25,4 +34,4 @@ const FrontNavbar = () => {
   );
 };
 
-export default FrontNavbar;
+export default Navbar;

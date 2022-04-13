@@ -248,7 +248,6 @@ VALUES ("https://www.w3schools.com/react/react_jsx.asp"),
 INSERT INTO resources (url)
 VALUES ("https://create-react-app.dev/docs/getting-started"),
 ("https://reactjs.org/docs/jsx-in-depth.html"),
-("https://reactjs.org/docs/components-and-props.html"),
 ("https://reactjs.org/docs/conditional-rendering.html"),
 ("https://www.w3schools.com/react/react_hooks.asp"),
 ("https://www.youtube.com/watch?v=rb1GWqCJid4");
@@ -359,8 +358,6 @@ INSERT INTO videos_to_resources (resource_id, video_id)
 VALUES((SELECT id from resources WHERE url = "https://create-react-app.dev/docs/getting-started"), 
 (SELECT id from videos WHERE subject = "Reacting To React")),
 ((SELECT id from resources WHERE url = "https://reactjs.org/docs/jsx-in-depth.html"), 
-(SELECT id from videos WHERE subject = "Reacting To React")),
-((SELECT id from resources WHERE url = "https://reactjs.org/docs/components-and-props.html"), 
 (SELECT id from videos WHERE subject = "Reacting To React")),
 ((SELECT id from resources WHERE url = "https://reactjs.org/docs/conditional-rendering.html"), 
 (SELECT id from videos WHERE subject = "Reacting To React")),
