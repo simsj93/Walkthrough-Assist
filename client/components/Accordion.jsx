@@ -18,7 +18,7 @@ const Accordion = (props) => {
                     </h5>
                 </div>
 
-                <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div id="collapseOne" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div className="card-body">
                         <ul>
                       {props.conceptList.map(concept => { 
